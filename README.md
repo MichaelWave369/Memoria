@@ -39,6 +39,10 @@ launchpad/
   apps.toml.snippet
 ```
 
+## R11.1 local application API (security candidate)
+
+The application API now requires an explicit per-app bearer credential and a native permission row. It is not production-qualified. See [the scoped API protocol](docs/LIVING_MEMORY_R11_API_SCOPE.md) for provisioning, compatibility changes and held routes. The direct operator UI remains a separate trusted-local path; do not expose it to a network.
+
 ## How it connects to Agentora
 
 Agentora can call Memoria directly:
@@ -46,7 +50,9 @@ Agentora can call Memoria directly:
 ```python
 from integrations.triad_hooks import MemoriaClient
 
-client = MemoriaClient("http://localhost:8765")
+import os
+
+client = MemoriaClient("http://127.0.0.1:8765", token=os.environ["AGENTORA_MEMORIA_TOKEN"])
 
 client.store(
     content="User prefers concise coaching prompts.",
@@ -57,7 +63,7 @@ client.store(
 )
 
 memories = client.query(app_name="Agentora", agent_id="coach-01", limit=10)
-related = client.semantic("What coaching style works best for this user?")
+# Semantic recall is held pending scoped vector privacy review.
 ```
 
 ## API Endpoints
@@ -71,7 +77,7 @@ related = client.semantic("What coaching style works best for this user?")
 
 ## Data-at-rest encryption option
 
-Enable at-rest encryption (for memory text values):
+Legacy operator-only encryption option (not qualified for real sensitive data). The API holds encrypted writes and redacts encrypted text until the next key-management milestone:
 
 ```bash
 export MEMORIA_ENCRYPT_AT_REST=1
