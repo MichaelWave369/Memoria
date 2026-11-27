@@ -42,7 +42,7 @@ def vector_collection():
 @st.cache_resource
 def start_api():
     def run():
-        uvicorn.run(fastapi_app, host="0.0.0.0", port=8765, log_level="warning")
+        uvicorn.run(fastapi_app, host="127.0.0.1", port=8765, log_level="warning")
 
     thread = threading.Thread(target=run, daemon=True)
     thread.start()
@@ -158,7 +158,7 @@ def privacy_page(cn, memories):
     default_apps = ["Agentora", "Growora", "Mindora", "Reconnect", "CoEvo"]
     existing = {p["app_name"]: p for p in get_permissions(cn)}
     for app in default_apps:
-        p = existing.get(app, {"can_read": 1, "can_write": 1})
+        p = existing.get(app, {"can_read": 0, "can_write": 0})
         c1, c2, c3 = st.columns([2, 2, 1])
         can_read = c1.toggle(f"{app} can read", value=bool(p["can_read"]), key=f"r_{app}")
         can_write = c2.toggle(f"{app} can write", value=bool(p["can_write"]), key=f"w_{app}")
@@ -187,8 +187,7 @@ def recall_page(collection):
     st.markdown("### Auto-Synthesis")
     window = st.radio("Window", ["daily", "weekly"], horizontal=True)
     if st.button("Generate synthesis"):
-        res = requests.get(f"http://localhost:8765/memoria/synthesis?window={window}", timeout=5)
-        st.json(res.json())
+        st.info("Application synthesis requires a scoped credential. Use the local API client; this operator UI does not impersonate an application.")
 
 
 def main():
@@ -200,6 +199,7 @@ def main():
     memories = query_memories(cn, limit=1000, cipher=cipher)
 
     st.title("🧠 Memoria v0.1 — The Eternal Memory Vault")
+    st.warning("Trusted local operator UI only. Do not expose Streamlit or the API to a network; storage, vector privacy and deletion review remain open.")
     tabs = st.tabs(["Dashboard", "Explorer", "Write", "Privacy", "Recall"])
     with tabs[0]:
         dashboard_page(memories)
