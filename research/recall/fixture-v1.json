@@ -1,0 +1,214 @@
+{
+  "schema": "memoria-recall-benchmark/v1",
+  "synthetic": true,
+  "documents": [
+    {
+      "id": 1,
+      "text": "router uplink packet loss switch port diagnostics"
+    },
+    {
+      "id": 2,
+      "text": "router firmware update configuration backup"
+    },
+    {
+      "id": 3,
+      "text": "battery voltage charge regulator solar panel"
+    },
+    {
+      "id": 4,
+      "text": "battery storage temperature capacity maintenance"
+    },
+    {
+      "id": 5,
+      "text": "database restore snapshot integrity transaction"
+    },
+    {
+      "id": 6,
+      "text": "database schema migration index performance"
+    },
+    {
+      "id": 7,
+      "text": "garden irrigation soil moisture seedlings"
+    },
+    {
+      "id": 8,
+      "text": "garden compost fertilizer nutrient schedule"
+    },
+    {
+      "id": 9,
+      "text": "audio mixer bass equalizer recording"
+    },
+    {
+      "id": 10,
+      "text": "audio speaker amplifier cable impedance"
+    },
+    {
+      "id": 11,
+      "text": "consent withdrawal memory deletion retention"
+    },
+    {
+      "id": 12,
+      "text": "memory encryption key rotation credential"
+    }
+  ],
+  "relations": {
+    "gateway": "router",
+    "dropout": "loss",
+    "accumulator": "battery",
+    "potential": "voltage",
+    "archive": "snapshot",
+    "recovery": "restore",
+    "watering": "irrigation",
+    "dampness": "moisture",
+    "console": "mixer",
+    "lowend": "bass",
+    "permission": "consent",
+    "revocation": "withdrawal"
+  },
+  "queries": [
+    {
+      "id": 1,
+      "family": "literal",
+      "text": "router packet loss",
+      "target": 1
+    },
+    {
+      "id": 2,
+      "family": "literal",
+      "text": "battery voltage regulator",
+      "target": 3
+    },
+    {
+      "id": 3,
+      "family": "literal",
+      "text": "database restore snapshot",
+      "target": 5
+    },
+    {
+      "id": 4,
+      "family": "literal",
+      "text": "garden irrigation soil",
+      "target": 7
+    },
+    {
+      "id": 5,
+      "family": "literal",
+      "text": "audio mixer bass",
+      "target": 9
+    },
+    {
+      "id": 6,
+      "family": "literal",
+      "text": "consent withdrawal deletion",
+      "target": 11
+    },
+    {
+      "id": 7,
+      "family": "alias",
+      "text": "gateway dropout",
+      "target": 1
+    },
+    {
+      "id": 8,
+      "family": "alias",
+      "text": "accumulator potential",
+      "target": 3
+    },
+    {
+      "id": 9,
+      "family": "alias",
+      "text": "archive recovery",
+      "target": 5
+    },
+    {
+      "id": 10,
+      "family": "alias",
+      "text": "watering dampness",
+      "target": 7
+    },
+    {
+      "id": 11,
+      "family": "alias",
+      "text": "console lowend",
+      "target": 9
+    },
+    {
+      "id": 12,
+      "family": "alias",
+      "text": "permission revocation",
+      "target": 11
+    },
+    {
+      "id": 13,
+      "family": "mixed",
+      "text": "gateway firmware backup",
+      "target": 2
+    },
+    {
+      "id": 14,
+      "family": "mixed",
+      "text": "accumulator temperature maintenance",
+      "target": 4
+    },
+    {
+      "id": 15,
+      "family": "mixed",
+      "text": "database migration performance",
+      "target": 6
+    },
+    {
+      "id": 16,
+      "family": "mixed",
+      "text": "garden compost schedule",
+      "target": 8
+    },
+    {
+      "id": 17,
+      "family": "mixed",
+      "text": "audio amplifier impedance",
+      "target": 10
+    },
+    {
+      "id": 18,
+      "family": "mixed",
+      "text": "memory encryption rotation",
+      "target": 12
+    },
+    {
+      "id": 19,
+      "family": "negative",
+      "text": "router warranty refund",
+      "target": null
+    },
+    {
+      "id": 20,
+      "family": "negative",
+      "text": "battery purchase invoice",
+      "target": null
+    },
+    {
+      "id": 21,
+      "family": "negative",
+      "text": "database court subpoena",
+      "target": null
+    },
+    {
+      "id": 22,
+      "family": "negative",
+      "text": "astronomy telescope nebula",
+      "target": null
+    },
+    {
+      "id": 23,
+      "family": "negative",
+      "text": "painting canvas watercolor",
+      "target": null
+    },
+    {
+      "id": 24,
+      "family": "negative",
+      "text": "recipe pasta tomato",
+      "target": null
+    }
+  ]
+}

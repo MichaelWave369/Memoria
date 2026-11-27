@@ -1,4 +1,3 @@
-import base64
 import json
 import os
 import sqlite3
@@ -6,20 +5,16 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from cryptography.fernet import Fernet
+from db.keyring import Keyring, REDACTED, load_keyring
 
 DB_PATH = Path(os.getenv("MEMORIA_DB_PATH", "memoria.db"))
 
 
-def _default_key() -> bytes:
-    seed = os.getenv("MEMORIA_KEY", "memoria-local-key-seed")
-    return base64.urlsafe_b64encode(seed.encode().ljust(32, b"0")[:32])
-
-
-def get_cipher(enabled: bool) -> Optional[Fernet]:
-    if not enabled:
-        return None
-    return Fernet(_default_key())
+def get_cipher(enabled: bool) -> Optional[Keyring]:
+    """Explicitly enabled encryption requires a valid provisioned keyring."""
+    if type(enabled) is not bool:
+        raise ValueError("explicit boolean encryption mode required")
+    return load_keyring() if enabled else None
 
 
 def init_db(conn: sqlite3.Connection) -> None:
@@ -57,29 +52,31 @@ def get_connection() -> sqlite3.Connection:
     return conn
 
 
-def encrypt_if_needed(content: str, cipher: Optional[Fernet]) -> tuple[str, int]:
-    if not cipher:
+def encrypt_if_needed(content: str, cipher: Optional[Keyring], app_name: str) -> tuple[str, int]:
+    if cipher is None:
         return content, 0
-    return cipher.encrypt(content.encode()).decode(), 1
+    if not isinstance(cipher, Keyring):
+        raise ValueError("versioned encryption keyring required")
+    return cipher.seal(content, app_name), 1
 
 
-def decrypt_if_needed(content: str, encrypted: int, cipher: Optional[Fernet]) -> str:
-    if not encrypted:
+def decrypt_if_needed(content: str, encrypted: int, cipher: Optional[Keyring], app_name: str) -> str:
+    if encrypted == 0:
         return content
-    if not cipher:
-        return "[Encrypted memory: enable encryption key to decrypt]"
-    return cipher.decrypt(content.encode()).decode()
+    if encrypted != 1 or not isinstance(cipher, Keyring):
+        return REDACTED
+    return cipher.open(content, app_name)
 
 
 def store_memory(
     conn: sqlite3.Connection,
     memory: Dict[str, Any],
-    cipher: Optional[Fernet] = None,
+    cipher: Optional[Keyring] = None,
 ) -> int:
     tags = json.dumps(memory.get("tags", []))
     metadata_json = json.dumps(memory.get("metadata", {}))
     timestamp = memory.get("timestamp") or datetime.utcnow().isoformat()
-    content, encrypted = encrypt_if_needed(memory["content"], cipher)
+    content, encrypted = encrypt_if_needed(memory["content"], cipher, memory["app_name"])
 
     cur = conn.execute(
         """
@@ -108,7 +105,7 @@ def query_memories(
     tag: Optional[str] = None,
     since: Optional[str] = None,
     limit: int = 100,
-    cipher: Optional[Fernet] = None,
+    cipher: Optional[Keyring] = None,
 ) -> List[Dict[str, Any]]:
     clauses, params = [], []
     if app_name:
@@ -134,7 +131,7 @@ def query_memories(
         out.append(
             {
                 "id": row["id"],
-                "content": decrypt_if_needed(row["content"], row["encrypted"], cipher),
+                "content": decrypt_if_needed(row["content"], row["encrypted"], cipher, row["app_name"]),
                 "app_name": row["app_name"],
                 "agent_id": row["agent_id"],
                 "timestamp": row["timestamp"],

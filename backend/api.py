@@ -1,15 +1,16 @@
 """Local application API; direct operator UI/storage are separate trust paths."""
 import json
-import os
 from contextlib import closing, contextmanager
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from backend.access import ConfigurationError, authenticate, permitted
 from db.storage import get_connection, query_memories, store_memory
+from db.keyring import KeyConfigurationError, configured_cipher
+from db.private_recall import RecallBudgetError, recall_with_cipher
 
 app = FastAPI(title="Memoria API", version="0.1.1")
 
@@ -27,6 +28,12 @@ class MemoryIn(BaseModel):
 class QueryIn(BaseModel):
     text: str
     limit: int = 5
+
+
+class RecallIn(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    text: str = Field(min_length=1, max_length=512)
+    limit: int = Field(default=5, ge=1, le=20)
 
 
 def caller(authorization: Optional[str] = Header(default=None)) -> str:
@@ -57,6 +64,13 @@ def authorized(principal, operation):
             yield conn
 
 
+def request_cipher():
+    try:
+        return configured_cipher()
+    except KeyConfigurationError:
+        raise HTTPException(status_code=503, detail="Encryption configuration unavailable") from None
+
+
 def held():
     raise HTTPException(status_code=503, detail="Operation held pending storage security review")
 
@@ -70,11 +84,8 @@ def health() -> Dict[str, str]:
 def memoria_store(memory: MemoryIn, principal: str = Depends(caller)) -> Dict[str, Any]:
     scope(memory.app_name, principal)
     with authorized(principal, "write") as conn:
-        # Do not silently store plaintext when encryption was requested.
-        # R11.2 must qualify key handling before encrypted API writes.
-        if os.getenv("MEMORIA_ENCRYPT_AT_REST", "0") != "0":
-            held()
-        new_id = store_memory(conn, memory.model_dump(), cipher=None)
+        cipher = request_cipher()
+        new_id = store_memory(conn, memory.model_dump(), cipher=cipher)
     # Indexing is deliberately deferred until scoped, private indexing exists.
     return {"id": new_id, "status": "stored", "index_status": "HELD"}
 
@@ -90,10 +101,22 @@ def memoria_query(
 ) -> Dict[str, Any]:
     app_name = scope(app_name, principal)
     with authorized(principal, "read") as conn:
-        # Legacy encrypted text remains redacted until key hardening.
+        cipher = request_cipher()
         memories = query_memories(conn, app_name=app_name, agent_id=agent_id,
-                                  tag=tag, since=since, limit=limit, cipher=None)
+                                  tag=tag, since=since, limit=limit, cipher=cipher)
     return {"count": len(memories), "items": memories}
+
+
+@app.post("/memoria/recall")
+def memoria_recall(query: RecallIn, principal: str = Depends(caller)):
+    with authorized(principal, "read") as conn:
+        cipher = request_cipher()
+        try:
+            return recall_with_cipher(conn, principal, query.text, limit=query.limit, cipher=cipher)
+        except RecallBudgetError:
+            raise HTTPException(status_code=503, detail="Recall scope exceeds research budget") from None
+        except ValueError:
+            raise HTTPException(status_code=422, detail="Invalid recall query or limit") from None
 
 
 @app.post("/memoria/semantic")

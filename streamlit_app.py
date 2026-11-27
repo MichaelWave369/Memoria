@@ -12,8 +12,8 @@ import streamlit as st
 import uvicorn
 
 from backend.api import app as fastapi_app
-from db.storage import get_cipher, get_connection, query_memories, set_permission, store_memory, delete_memory, get_permissions
-from db.vector_store import get_collection, query_similar, upsert_memory
+from db.storage import get_connection, query_memories, set_permission, store_memory, delete_memory, get_permissions
+from db.keyring import configured_cipher, KeyConfigurationError
 
 st.set_page_config(page_title="Memoria — The Eternal Memory Vault", page_icon="🧠", layout="wide")
 
@@ -32,11 +32,6 @@ st.markdown(
 @st.cache_resource
 def conn():
     return get_connection()
-
-
-@st.cache_resource
-def vector_collection():
-    return get_collection()
 
 
 @st.cache_resource
@@ -122,7 +117,7 @@ def explorer_page(memories):
         st.button("Recall in Agentora", key=f"rec_{m['id']}")
 
 
-def write_page(cn, collection):
+def write_page(cn):
     st.subheader("Write & Ingest")
     with st.form("quick_capture"):
         content = st.text_area("Memory")
@@ -141,10 +136,13 @@ def write_page(cn, collection):
             "importance_score": importance,
             "metadata": {"source": "quick_capture"},
         }
-        cipher = get_cipher(os.getenv("MEMORIA_ENCRYPT_AT_REST", "0") == "1")
+        try:
+            cipher = configured_cipher()
+        except KeyConfigurationError:
+            st.error("Encryption configuration unavailable. No memory stored.")
+            return
         mid = store_memory(cn, payload, cipher)
-        upsert_memory(collection, mid, content, {"app_name": app_name, "agent_id": agent_id})
-        st.success(f"Stored memory #{mid}")
+        st.success(f"Stored memory #{mid}. Vector indexing is held.")
 
     st.code(
         """curl -X POST http://localhost:8765/memoria/store \\
@@ -176,13 +174,9 @@ def privacy_page(cn, memories):
         st.warning("Memory deleted.")
 
 
-def recall_page(collection):
+def recall_page():
     st.subheader("Smart Recall & Synthesis")
-    q = st.text_input("Ask the Vault")
-    if st.button("Query Memories") and q:
-        matches = query_similar(collection, q, 5)
-        for m in matches:
-            st.markdown(f"- **{m['metadata'].get('app_name','?')}**: {m['content'][:220]}")
+    st.info("Vector recall is held pending scoped index privacy and deletion review.")
 
     st.markdown("### Auto-Synthesis")
     window = st.radio("Window", ["daily", "weekly"], horizontal=True)
@@ -194,8 +188,11 @@ def main():
     start_api()
     sidebar()
     cn = conn()
-    collection = vector_collection()
-    cipher = get_cipher(os.getenv("MEMORIA_ENCRYPT_AT_REST", "0") == "1")
+    try:
+        cipher = configured_cipher()
+    except KeyConfigurationError:
+        st.error("Encryption configuration unavailable. Memory access is held.")
+        return
     memories = query_memories(cn, limit=1000, cipher=cipher)
 
     st.title("🧠 Memoria v0.1 — The Eternal Memory Vault")
@@ -206,11 +203,11 @@ def main():
     with tabs[1]:
         explorer_page(memories)
     with tabs[2]:
-        write_page(cn, collection)
+        write_page(cn)
     with tabs[3]:
         privacy_page(cn, memories)
     with tabs[4]:
-        recall_page(collection)
+        recall_page()
 
 
 if __name__ == "__main__":

@@ -1,20 +1,20 @@
 # 🧠 Memoria v0.1 — The Eternal Memory Vault
 
-> A beautiful, 100% local and private persistent memory layer for the entire Triad369 ecosystem.
+> An experimental local-first persistent memory layer for the Triad369 ecosystem.
 
 ![hero screenshot placeholder](docs/screenshots/hero-placeholder.png)
 
-Memoria gives Agentora, Growora, Mindora, Reconnect, CoEvo, and future Triad apps a shared long-term memory vault with structured storage, semantic recall, and growth synthesis — all fully offline.
+Memoria gives Agentora, Growora, Mindora, Reconnect, CoEvo, and future Triad apps a shared long-term memory vault with structured storage and scoped synthesis. Semantic recall remains held during security hardening.
 
 ## Highlights
 
 - **No cloud, no telemetry, no external data services**
 - **Streamlit-first noir UI** + embedded **FastAPI** backend
-- **SQLite + Chroma vector store** (lightweight, local)
-- Local embeddings via **Ollama** (`nomic-embed-text`) with deterministic local fallback
+- **SQLite storage** with optional versioned text encryption
+- Chroma/Ollama legacy paths held pending private indexing review
 - Permission controls per app (read/write)
 - Export as `.memoria` vault file
-- “Forget” sensitive memories in one click
+- Local SQL deletion only; coordinated forgetting remains unqualified
 - Launchpad-ready snippet included
 
 ## One-command install
@@ -63,26 +63,35 @@ client.store(
 )
 
 memories = client.query(app_name="Agentora", agent_id="coach-01", limit=10)
-# Semantic recall is held pending scoped vector privacy review.
+matches = client.recall("coaching prompts", limit=5)
+# Lexical baseline; semantic recall remains held.
 ```
 
 ## API Endpoints
 
 - `POST /memoria/store`
 - `GET /memoria/query`
-- `POST /memoria/semantic`
+- `POST /memoria/recall` — bounded scoped lexical retrieval (IDs and rational scores)
+- `POST /memoria/semantic` — held
 - `GET /memoria/synthesis?window=daily|weekly`
 - `POST /permissions/{app_name}?can_read=true&can_write=false`
 - `GET /health`
 
+## Private recall research baseline
+
+The new lexical route scans only authorized application records within explicit research budgets, without a persistent vector index or model call. See [R11.3a protocol](docs/LIVING_MEMORY_R11_PRIVATE_RECALL.md). Production remains HELD.
+
 ## Data-at-rest encryption option
 
-Legacy operator-only encryption option (not qualified for real sensitive data). The API holds encrypted writes and redacts encrypted text until the next key-management milestone:
+R11.2 requires explicitly provisioned, randomly generated Fernet keys. Configure the following through a protected local supervisor environment or secret manager:
 
-```bash
-export MEMORIA_ENCRYPT_AT_REST=1
-export MEMORIA_KEY="your-local-secret"
-```
+- `MEMORIA_ENCRYPT_AT_REST=1`
+- `MEMORIA_ENCRYPTION_KEYS`: JSON object mapping key IDs to canonical URL-safe base64 Fernet keys
+- `MEMORIA_ACTIVE_KEY_ID`: the ID used for new writes
+
+Generate keys using `cryptography.fernet.Fernet.generate_key()`. Do not reuse the old `MEMORIA_KEY` password or commit secrets. Existing legacy ciphertext is preserved and redacted; no automatic migration occurs. Text encryption does not encrypt tags, metadata, SQLite files or backups. API and operator UI vector indexing/recall are held.
+
+See [R11.2 encryption contract](docs/LIVING_MEMORY_R11_KEYRING.md) for rotation, provisioning, and limitations. Production remains HELD.
 
 ## Triad369 Launchpad registration
 
