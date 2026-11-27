@@ -1,6 +1,5 @@
 import json
 from contextlib import closing
-import os
 import socket
 import threading
 from datetime import datetime
@@ -8,7 +7,6 @@ from typing import List
 
 import pandas as pd
 import plotly.express as px
-import requests
 import streamlit as st
 import uvicorn
 
@@ -16,7 +14,7 @@ from backend.api import app as fastapi_app
 from db.storage import get_connection, query_memories, set_permission, store_memory, delete_memory, get_permissions
 from db.keyring import configured_cipher, KeyConfigurationError
 
-st.set_page_config(page_title="Memoria — The Eternal Memory Vault", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="Memoria | PHI369 Memory", page_icon="🧠", layout="wide")
 
 st.markdown(
     """
@@ -28,11 +26,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-
-@st.cache_resource
-def conn():
-    return get_connection()
 
 
 @st.cache_resource
@@ -60,31 +53,34 @@ def sidebar():
     st.sidebar.title("Triad369 Link")
     running = detect_triad_apps()
     if running:
-        st.sidebar.success(f"Detected: {', '.join(running)}")
+        st.sidebar.info(f"Open local ports (app identity unverified): {', '.join(running)}")
     else:
-        st.sidebar.info("No Triad apps detected on localhost right now.")
-    st.sidebar.code("/memoria/store\n/memoria/query\n/memoria/semantic")
+        st.sidebar.info("No configured Triad ports responded on localhost.")
+    st.sidebar.code("/memoria/store\n/memoria/query\n/memoria/recall")
+    st.sidebar.caption("Authenticated API only. Semantic recall is held.")
 
 
 def dashboard_page(memories):
     st.subheader("Memory Dashboard")
     total = len(memories)
     recent = memories[:5]
-    by_app = pd.Series([m["app_name"] for m in memories]).value_counts().reset_index() if memories else pd.DataFrame(columns=["app_name", "count"])
+    by_app = pd.Series([m["app_name"] for m in memories]).value_counts().rename_axis("app_name").reset_index(name="count") if memories else pd.DataFrame(columns=["app_name", "count"])
     c1, c2, c3 = st.columns(3)
-    c1.metric("Total Memories", total)
-    c2.metric("Active Apps", len({m['app_name'] for m in memories}))
+    c1.metric("Loaded Memories", total)
+    c2.metric("Apps in view", len({m['app_name'] for m in memories}))
     c3.metric("Unique Agents", len({m['agent_id'] for m in memories}))
 
     if memories:
         df = pd.DataFrame(memories)
-        df["date"] = pd.to_datetime(df["timestamp"]).dt.date
+        df["date"] = pd.to_datetime(df["timestamp"], errors="coerce", utc=True).dt.date
         timeline = df.groupby("date").size().reset_index(name="count")
         fig = px.line(timeline, x="date", y="count", title="Growth Timeline")
         st.plotly_chart(fig, use_container_width=True)
     st.markdown("### Recent Entries")
     for m in recent:
-        st.markdown(f"<div class='mem-card'><span class='badge'>{m['app_name']}</span>{m['content'][:180]}</div>", unsafe_allow_html=True)
+        with st.container(border=True):
+            st.text(m["app_name"])
+            st.text(m["content"][:180])
 
     st.markdown("### Most Active Apps")
     if not by_app.empty:
@@ -106,16 +102,15 @@ def explorer_page(memories):
             continue
         if tag_filter != "All" and tag_filter not in m["tags"]:
             continue
-        if q and q.lower() not in (m["content"] + json.dumps(m["metadata"]).lower()):
+        if q and q.casefold() not in (m["content"] + " " + json.dumps(m["metadata"], ensure_ascii=False)).casefold():
             continue
         filtered.append(m)
 
     for m in filtered:
-        st.markdown(
-            f"<div class='mem-card'><span class='badge'>{m['app_name']}</span><b>{m['agent_id']}</b><br>{m['content'][:280]}<br><small>{m['timestamp']} | tags: {', '.join(m['tags'])}</small></div>",
-            unsafe_allow_html=True,
-        )
-        st.button("Recall in Agentora", key=f"rec_{m['id']}")
+        with st.container(border=True):
+            st.text(f"#{m['id']} | {m['app_name']} | {m['agent_id']}")
+            st.text(m["content"][:280])
+            st.text(f"{m['timestamp']} | tags: {', '.join(m['tags'])}")
 
 
 def write_page(cn):
@@ -145,18 +140,14 @@ def write_page(cn):
         mid = store_memory(cn, payload, cipher)
         st.success(f"Stored memory #{mid}. Vector indexing is held.")
 
-    st.code(
-        """curl -X POST http://localhost:8765/memoria/store \\
-  -H 'Content-Type: application/json' \\
-  -d '{"content":"learned prompt trick","app_name":"Agentora","agent_id":"agent-7","tags":["prompting"]}'"""
-    )
+    st.info("Application writes require a provisioned bearer credential and native write permission. See the README for the local client.")
 
 
 def privacy_page(cn, memories):
     st.subheader("Privacy & Control Center")
     default_apps = ["Agentora", "Growora", "Mindora", "Reconnect", "CoEvo"]
     existing = {p["app_name"]: p for p in get_permissions(cn)}
-    for app in default_apps:
+    for app in sorted(set(default_apps) | set(existing) | {m["app_name"] for m in memories}):
         p = existing.get(app, {"can_read": 0, "can_write": 0})
         c1, c2, c3 = st.columns([2, 2, 1])
         can_read = c1.toggle(f"{app} can read", value=bool(p["can_read"]), key=f"r_{app}")
@@ -173,7 +164,8 @@ def privacy_page(cn, memories):
 
     st.markdown("### Export")
     export_data = json.dumps(memories, indent=2)
-    st.download_button("Export vault (.memoria)", data=export_data, file_name="vault.memoria", mime="application/json")
+    st.warning("Export contains only the loaded view (up to 1,000 rows), potentially decrypted. It is not an encrypted backup.")
+    st.download_button("Export loaded snapshot (.memoria)", data=export_data, file_name="memoria-snapshot.memoria", mime="application/json")
 
     st.markdown("### Forget Memory")
     mem_id = st.number_input("Memory ID to forget", min_value=1, step=1)
@@ -187,8 +179,8 @@ def privacy_page(cn, memories):
 
 
 def recall_page():
-    st.subheader("Smart Recall & Synthesis")
-    st.info("Vector recall is held pending scoped index privacy and deletion review.")
+    st.subheader("Scoped Recall & Synthesis")
+    st.info("The authenticated API supports bounded lexical recall at POST /memoria/recall. Vector recall remains held; this operator UI does not impersonate an application.")
 
     st.markdown("### Auto-Synthesis")
     window = st.radio("Window", ["daily", "weekly"], horizontal=True)
@@ -199,27 +191,28 @@ def recall_page():
 def main():
     start_api()
     sidebar()
-    cn = conn()
+    st.title("Memoria | PHI369 Memory")
+    st.caption("R11 research candidate · Trusted local operator · Synthetic data only")
+    st.warning("Do not expose Streamlit or the API to a network. Production and sensitive-data use remain held.")
     try:
         cipher = configured_cipher()
     except KeyConfigurationError:
         st.error("Encryption configuration unavailable. Memory access is held.")
         return
-    memories = query_memories(cn, limit=1000, cipher=cipher)
-
-    st.title("🧠 Memoria v0.1 — The Eternal Memory Vault")
-    st.warning("Trusted local operator UI only. Do not expose Streamlit or the API to a network; storage, vector privacy and deletion review remain open.")
-    tabs = st.tabs(["Dashboard", "Explorer", "Write", "Privacy", "Recall"])
-    with tabs[0]:
-        dashboard_page(memories)
-    with tabs[1]:
-        explorer_page(memories)
-    with tabs[2]:
-        write_page(cn)
-    with tabs[3]:
-        privacy_page(cn, memories)
-    with tabs[4]:
-        recall_page()
+    with closing(get_connection()) as cn:
+        memories = query_memories(cn, limit=1000, cipher=cipher)
+        st.caption("Current view: up to 1,000 recent SQL records, not a complete vault census.")
+        tabs = st.tabs(["Dashboard", "Explorer", "Write", "Privacy", "Recall"])
+        with tabs[0]:
+            dashboard_page(memories)
+        with tabs[1]:
+            explorer_page(memories)
+        with tabs[2]:
+            write_page(cn)
+        with tabs[3]:
+            privacy_page(cn, memories)
+        with tabs[4]:
+            recall_page()
 
 
 if __name__ == "__main__":
