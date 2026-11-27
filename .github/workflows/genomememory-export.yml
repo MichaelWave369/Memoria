@@ -53,6 +53,10 @@ jobs:
           MEMORIA_NATIVE_PHI_MEMORY: ${{ github.workspace }}/native/PhiMemory9
           MEMORIA_NATIVE_POCKETMESH: ${{ github.workspace }}/native/NBGPocketMesh
         run: python -m unittest discover -s tests -p 'test_native_retention_continuity_r11.py' -v
+      - name: Native held source handoff
+        env:
+          MEMORIA_NATIVE_PHI_MEMORY: ${{ github.workspace }}/native/PhiMemory9
+        run: python -m unittest discover -s tests -p 'test_fixture_qualification_r11.py' -v
   operator-ui-smoke:
     runs-on: ubuntu-latest
     env:

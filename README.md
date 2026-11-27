@@ -170,7 +170,7 @@ Native Chroma tests are opt-in, use fresh disposable directories, and run in CI 
 - [R11.3a recall](docs/LIVING_MEMORY_R11_PRIVATE_RECALL.md), [R11.3b benchmark](docs/LIVING_MEMORY_R11_RECALL_BENCHMARK.md), [R11.3c abstention](docs/LIVING_MEMORY_R11_ABSTENTION.md), [R11.3d provenance](docs/LIVING_MEMORY_R11_RELATION_PROVENANCE.md)
 - [R11.4a deletion intent](docs/LIVING_MEMORY_R11_FORGET_INTENT.md), [R11.4b vector cleanup](docs/LIVING_MEMORY_R11_VECTOR_CLEANUP.md)
 - [R11.5a restart](docs/LIVING_MEMORY_R11_VECTOR_RECOVERY.md), [R11.5b continuity](docs/LIVING_MEMORY_R11_RETENTION_CONTINUITY.md)
-- [R11.6 source qualification](https://github.com/MichaelWave369/Memoria/pull/14) (separate qualification PR)
+- [R11.6 source qualification](docs/LIVING_MEMORY_R11_SOURCE_QUALIFICATION.md)
 
 Independent security review, authenticated deletion consent, full content integrity, independently administered witness custody, legacy vector migration, external copy retention, real-world retrieval evaluation and runtime authorization remain open. See [current repository review](docs/REPOSITORY_REFRESH_R11.md).
 
