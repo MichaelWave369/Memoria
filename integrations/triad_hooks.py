@@ -41,5 +41,9 @@ class MemoriaClient:
         params = {k: v for k, v in params.items() if v is not None}
         return self._request("GET", "/memoria/query", params=params)
 
+    def recall(self, text: str, limit: int = 5) -> Dict[str, Any]:
+        """Bounded lexical recall; results contain IDs and overlap scores only."""
+        return self._request("POST", "/memoria/recall", json={"text": text, "limit": limit})
+
     def semantic(self, text: str, limit: int = 5) -> Dict[str, Any]:
         return self._request("POST", "/memoria/semantic", json={"text": text, "limit": limit})
