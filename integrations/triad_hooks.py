@@ -7,7 +7,7 @@ import requests
 
 
 class MemoriaClient:
-    def __init__(self, base_url: str = "http://localhost:8765", *, token: str | None = None):
+    def __init__(self, base_url: str = "http://127.0.0.1:8765", *, token: str | None = None):
         self.base_url = base_url.rstrip("/")
         self._headers = {"Authorization": f"Bearer {token}"} if token is not None else {}
         if token is not None:
@@ -23,6 +23,7 @@ class MemoriaClient:
                                        timeout=8, allow_redirects=False, **kwargs)
             if 300 <= response.status_code < 400:
                 raise requests.HTTPError("Memoria redirect refused", response=response)
+            response.raise_for_status()
             return response.json()
 
     def store(self, content: str, app_name: str, agent_id: str, tags: List[str] | None = None, importance_score: float = 0.6, metadata: Dict[str, Any] | None = None) -> Dict[str, Any]:

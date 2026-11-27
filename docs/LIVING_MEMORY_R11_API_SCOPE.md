@@ -1,5 +1,7 @@
 # Living Memory R11.1 — local application API authorization
 
+> Historical milestone: encryption, recall and deletion behavior below describes R11.1 at its original revision. For the current interface see [README](../README.md), [R11.2](LIVING_MEMORY_R11_KEYRING.md), [R11.3a](LIVING_MEMORY_R11_PRIVATE_RECALL.md), and [R11.4a](LIVING_MEMORY_R11_FORGET_INTENT.md).
+
 Base 48ec222d39f1fcc4b54cf99b6fcd2b15be1a1be8. Source inspection of
 backend/api.py, db/storage.py, db/vector_store.py, streamlit_app.py and
 integrations/triad_hooks.py confirms missing authenticated read/synthesis/
