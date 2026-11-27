@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 from backend.access import ConfigurationError, authenticate, permitted
 from db.storage import get_connection, query_memories, store_memory
 from db.keyring import KeyConfigurationError, configured_cipher
+from db.private_recall import RecallBudgetError, recall_with_cipher
 
 app = FastAPI(title="Memoria API", version="0.1.1")
 
@@ -98,6 +99,18 @@ def memoria_query(
         memories = query_memories(conn, app_name=app_name, agent_id=agent_id,
                                   tag=tag, since=since, limit=limit, cipher=cipher)
     return {"count": len(memories), "items": memories}
+
+
+@app.post("/memoria/recall")
+def memoria_recall(query: QueryIn, principal: str = Depends(caller)):
+    with authorized(principal, "read") as conn:
+        cipher = request_cipher()
+        try:
+            return recall_with_cipher(conn, principal, query.text, limit=query.limit, cipher=cipher)
+        except RecallBudgetError:
+            raise HTTPException(status_code=503, detail="Recall scope exceeds research budget") from None
+        except ValueError:
+            raise HTTPException(status_code=422, detail="Invalid recall query or limit") from None
 
 
 @app.post("/memoria/semantic")
