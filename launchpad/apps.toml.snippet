@@ -1,9 +1,9 @@
 [[apps]]
 name = "Memoria"
 slug = "memoria"
-version = "0.1.0"
-entry = "streamlit run streamlit_app.py"
-description = "Local eternal memory vault for the Triad369 ecosystem."
+version = "0.1.1"
+entry = "streamlit run streamlit_app.py --server.address 127.0.0.1"
+description = "PHI369 local-first persistent memory; R11 research candidate."
 category = "core"
 repository = "https://github.com/MichaelWave369/Memoria"
-healthcheck = "http://localhost:8765/health"
+healthcheck = "http://127.0.0.1:8765/health"
