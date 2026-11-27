@@ -1,0 +1,213 @@
+{
+  "schema": "memoria-relation-provenance-result/v1",
+  "synthetic": true,
+  "authority": "NONE",
+  "summary": {
+    "scenarios": 18,
+    "contract_matches": 18,
+    "admitted": 4,
+    "correct_admissions": 3,
+    "wrong_admissions": 1,
+    "abstentions": 14
+  },
+  "rows": [
+    {
+      "id": "two_distinct_records",
+      "expected": "router",
+      "truth": "router",
+      "target": "router",
+      "reason": "SUPPORTED_FIXTURE",
+      "approved_records": 2,
+      "distinct_roots": 2,
+      "distinct_sources": 2,
+      "authority": "NONE"
+    },
+    {
+      "id": "same_root",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 2,
+      "distinct_roots": 1,
+      "distinct_sources": 2,
+      "authority": "NONE"
+    },
+    {
+      "id": "same_source",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 2,
+      "distinct_roots": 2,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "pending_review",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "rejected_review",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "retired",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "expired",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "not_yet_issued",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "wrong_app",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "NO_SCOPE",
+      "approved_records": 0,
+      "distinct_roots": 0,
+      "distinct_sources": 0,
+      "authority": "NONE"
+    },
+    {
+      "id": "wrong_context",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "NO_SCOPE",
+      "approved_records": 0,
+      "distinct_roots": 0,
+      "distinct_sources": 0,
+      "authority": "NONE"
+    },
+    {
+      "id": "conflict_even_with_majority",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "CONFLICT",
+      "approved_records": 3,
+      "distinct_roots": 3,
+      "distinct_sources": 3,
+      "authority": "NONE"
+    },
+    {
+      "id": "withdraw_record",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "withdraw_root",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "withdraw_source",
+      "expected": null,
+      "truth": "router",
+      "target": null,
+      "reason": "INSUFFICIENT_DISTINCT_EVIDENCE",
+      "approved_records": 1,
+      "distinct_roots": 1,
+      "distinct_sources": 1,
+      "authority": "NONE"
+    },
+    {
+      "id": "withdraw_conflict",
+      "expected": "router",
+      "truth": "router",
+      "target": "router",
+      "reason": "SUPPORTED_FIXTURE",
+      "approved_records": 2,
+      "distinct_roots": 2,
+      "distinct_sources": 2,
+      "authority": "NONE"
+    },
+    {
+      "id": "unknown_alias",
+      "expected": null,
+      "truth": null,
+      "target": null,
+      "reason": "NO_SCOPE",
+      "approved_records": 0,
+      "distinct_roots": 0,
+      "distinct_sources": 0,
+      "authority": "NONE"
+    },
+    {
+      "id": "forged_consistent_evidence",
+      "expected": "mixer",
+      "truth": "router",
+      "target": "mixer",
+      "reason": "SUPPORTED_FIXTURE",
+      "approved_records": 2,
+      "distinct_roots": 2,
+      "distinct_sources": 2,
+      "authority": "NONE"
+    },
+    {
+      "id": "three_sources_one_withdrawn",
+      "expected": "router",
+      "truth": "router",
+      "target": "router",
+      "reason": "SUPPORTED_FIXTURE",
+      "approved_records": 2,
+      "distinct_roots": 2,
+      "distinct_sources": 2,
+      "authority": "NONE"
+    }
+  ]
+}
