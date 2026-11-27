@@ -1,6 +1,5 @@
 """Local application API; direct operator UI/storage are separate trust paths."""
 import json
-import os
 from contextlib import closing, contextmanager
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
@@ -10,6 +9,7 @@ from pydantic import BaseModel, Field
 
 from backend.access import ConfigurationError, authenticate, permitted
 from db.storage import get_connection, query_memories, store_memory
+from db.keyring import KeyConfigurationError, configured_cipher
 
 app = FastAPI(title="Memoria API", version="0.1.1")
 
@@ -57,6 +57,13 @@ def authorized(principal, operation):
             yield conn
 
 
+def request_cipher():
+    try:
+        return configured_cipher()
+    except KeyConfigurationError:
+        raise HTTPException(status_code=503, detail="Encryption configuration unavailable") from None
+
+
 def held():
     raise HTTPException(status_code=503, detail="Operation held pending storage security review")
 
@@ -70,11 +77,8 @@ def health() -> Dict[str, str]:
 def memoria_store(memory: MemoryIn, principal: str = Depends(caller)) -> Dict[str, Any]:
     scope(memory.app_name, principal)
     with authorized(principal, "write") as conn:
-        # Do not silently store plaintext when encryption was requested.
-        # R11.2 must qualify key handling before encrypted API writes.
-        if os.getenv("MEMORIA_ENCRYPT_AT_REST", "0") != "0":
-            held()
-        new_id = store_memory(conn, memory.model_dump(), cipher=None)
+        cipher = request_cipher()
+        new_id = store_memory(conn, memory.model_dump(), cipher=cipher)
     # Indexing is deliberately deferred until scoped, private indexing exists.
     return {"id": new_id, "status": "stored", "index_status": "HELD"}
 
@@ -90,9 +94,9 @@ def memoria_query(
 ) -> Dict[str, Any]:
     app_name = scope(app_name, principal)
     with authorized(principal, "read") as conn:
-        # Legacy encrypted text remains redacted until key hardening.
+        cipher = request_cipher()
         memories = query_memories(conn, app_name=app_name, agent_id=agent_id,
-                                  tag=tag, since=since, limit=limit, cipher=None)
+                                  tag=tag, since=since, limit=limit, cipher=cipher)
     return {"count": len(memories), "items": memories}
 
 
