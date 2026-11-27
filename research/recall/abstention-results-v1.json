@@ -1,0 +1,6114 @@
+{
+  "schema": "memoria-abstention-result/v1",
+  "synthetic": true,
+  "authority": "NONE",
+  "calibration": {
+    "direct": {
+      "selected": {
+        "coverage": 0.5,
+        "margin": 0.25,
+        "minSupported": 1
+      },
+      "grid": [
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 2,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 4,
+            "coverage": 0.333333333333,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 2,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 4,
+            "coverage": 0.333333333333,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain_positive": 3,
+            "abstain_negative": 6,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 3,
+            "coverage": 0.25,
+            "selective_error": 0
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 3,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 4,
+            "coverage": 0.333333333333,
+            "selective_error": 0.25
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 3,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 3,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 1,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 1
+              }
+            },
+            "admitted": 4,
+            "coverage": 0.333333333333,
+            "selective_error": 0.25
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain_positive": 2,
+            "abstain_negative": 4,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 6,
+            "coverage": 0.5,
+            "selective_error": 0.333333333333
+          }
+        }
+      ]
+    },
+    "relational": {
+      "selected": {
+        "coverage": 1,
+        "margin": 0.125,
+        "minSupported": 2
+      },
+      "grid": [
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.125,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.125,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 0,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 7,
+            "coverage": 0.583333333333,
+            "selective_error": 0.142857142857
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.25,
+            "minSupported": 2
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0.25,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 4,
+            "wrong": 0,
+            "false_accept": 1,
+            "abstain_positive": 2,
+            "abstain_negative": 5,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 2
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 5,
+            "coverage": 0.416666666667,
+            "selective_error": 0.2
+          }
+        },
+        {
+          "gate": {
+            "coverage": 1,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain_positive": 0,
+            "abstain_negative": 4,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 8,
+            "coverage": 0.666666666667,
+            "selective_error": 0.25
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.75,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain_positive": 0,
+            "abstain_negative": 4,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 8,
+            "coverage": 0.666666666667,
+            "selective_error": 0.25
+          }
+        },
+        {
+          "gate": {
+            "coverage": 0.5,
+            "margin": 0,
+            "minSupported": 1
+          },
+          "metrics": {
+            "queries": 12,
+            "answerable": 6,
+            "unanswerable": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain_positive": 0,
+            "abstain_negative": 4,
+            "by_family": {
+              "literal": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "alias": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "mixed": {
+                "count": 2,
+                "correct": 2,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 0
+              },
+              "ambiguous": {
+                "count": 2,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 1
+              },
+              "negative": {
+                "count": 3,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 0,
+                "abstain": 3
+              },
+              "misleading": {
+                "count": 1,
+                "correct": 0,
+                "wrong": 0,
+                "false_accept": 1,
+                "abstain": 0
+              }
+            },
+            "admitted": 8,
+            "coverage": 0.666666666667,
+            "selective_error": 0.25
+          }
+        }
+      ]
+    }
+  },
+  "evaluation": {
+    "direct": {
+      "metrics": {
+        "queries": 36,
+        "answerable": 20,
+        "unanswerable": 16,
+        "correct": 16,
+        "wrong": 1,
+        "false_accept": 10,
+        "abstain_positive": 3,
+        "abstain_negative": 6,
+        "by_family": {
+          "literal": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "alias": {
+            "count": 6,
+            "correct": 2,
+            "wrong": 1,
+            "false_accept": 0,
+            "abstain": 3
+          },
+          "ambiguous": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 5,
+            "abstain": 1
+          },
+          "negative": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 3,
+            "abstain": 3
+          },
+          "misleading": {
+            "count": 4,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain": 2
+          },
+          "mixed": {
+            "count": 8,
+            "correct": 8,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          }
+        },
+        "admitted": 27,
+        "coverage": 0.75,
+        "selective_error": 0.407407407407
+      },
+      "cost": {
+        "candidate_comparisons": 432,
+        "support_probes": 960,
+        "relation_lookups": 0
+      },
+      "rows": [
+        {
+          "id": 1,
+          "family": "literal",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "family": "literal",
+          "target": 4,
+          "selected": 4,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 4,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "family": "literal",
+          "target": 6,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "family": "literal",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 7,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "family": "literal",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "family": "literal",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "family": "alias",
+          "target": 1,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 8,
+          "family": "alias",
+          "target": 3,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 9,
+          "family": "alias",
+          "target": 5,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 10,
+          "family": "alias",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.2,
+          "top": [
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "family": "alias",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.2,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "family": "alias",
+          "target": 12,
+          "selected": 11,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 15,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.25,
+          "top": [
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 9,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.25,
+          "top": [
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 5,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "family": "negative",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "family": "negative",
+          "target": null,
+          "selected": 3,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "family": "negative",
+          "target": null,
+          "selected": 11,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 23,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 24,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 25,
+          "family": "misleading",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "family": "misleading",
+          "target": null,
+          "selected": 5,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 28,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 29,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "family": "mixed",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "family": "mixed",
+          "target": 11,
+          "selected": 11,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 11,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "family": "mixed",
+          "target": 2,
+          "selected": 2,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 2,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "family": "mixed",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "family": "mixed",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "family": "mixed",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 9,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        }
+      ]
+    },
+    "relational": {
+      "metrics": {
+        "queries": 36,
+        "answerable": 20,
+        "unanswerable": 16,
+        "correct": 20,
+        "wrong": 0,
+        "false_accept": 13,
+        "abstain_positive": 0,
+        "abstain_negative": 3,
+        "by_family": {
+          "literal": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "alias": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "ambiguous": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 6,
+            "abstain": 0
+          },
+          "negative": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 3,
+            "abstain": 3
+          },
+          "misleading": {
+            "count": 4,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 4,
+            "abstain": 0
+          },
+          "mixed": {
+            "count": 8,
+            "correct": 8,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          }
+        },
+        "admitted": 33,
+        "coverage": 0.916666666667,
+        "selective_error": 0.393939393939
+      },
+      "cost": {
+        "candidate_comparisons": 432,
+        "support_probes": 1224,
+        "relation_lookups": 80
+      },
+      "rows": [
+        {
+          "id": 1,
+          "family": "literal",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "family": "literal",
+          "target": 4,
+          "selected": 4,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 4,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "family": "literal",
+          "target": 6,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "family": "literal",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 7,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "family": "literal",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "family": "literal",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "family": "alias",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "family": "alias",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "family": "alias",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "family": "alias",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 7,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "family": "alias",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 9,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "family": "alias",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 8,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 9,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 10,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 5,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "family": "negative",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "family": "negative",
+          "target": null,
+          "selected": 3,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "family": "negative",
+          "target": null,
+          "selected": 11,
+          "reason": null,
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 23,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 24,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 25,
+          "family": "misleading",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "family": "misleading",
+          "target": null,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "family": "misleading",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "family": "misleading",
+          "target": null,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "family": "mixed",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "family": "mixed",
+          "target": 11,
+          "selected": 11,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 11,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "family": "mixed",
+          "target": 2,
+          "selected": 2,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 2,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "family": "mixed",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "family": "mixed",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "family": "mixed",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 9,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        }
+      ]
+    },
+    "guarded_direct": {
+      "metrics": {
+        "queries": 36,
+        "answerable": 20,
+        "unanswerable": 16,
+        "correct": 11,
+        "wrong": 0,
+        "false_accept": 2,
+        "abstain_positive": 9,
+        "abstain_negative": 14,
+        "by_family": {
+          "literal": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "alias": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "ambiguous": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain": 4
+          },
+          "negative": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "misleading": {
+            "count": 4,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 4
+          },
+          "mixed": {
+            "count": 8,
+            "correct": 5,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 3
+          }
+        },
+        "admitted": 13,
+        "coverage": 0.361111111111,
+        "selective_error": 0.153846153846
+      },
+      "cost": {
+        "candidate_comparisons": 432,
+        "support_probes": 960,
+        "relation_lookups": 0
+      },
+      "rows": [
+        {
+          "id": 1,
+          "family": "literal",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "family": "literal",
+          "target": 4,
+          "selected": 4,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 4,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "family": "literal",
+          "target": 6,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "family": "literal",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 7,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "family": "literal",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "family": "literal",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "family": "alias",
+          "target": 1,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 8,
+          "family": "alias",
+          "target": 3,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 9,
+          "family": "alias",
+          "target": 5,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 10,
+          "family": "alias",
+          "target": 7,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0.2,
+          "top": [
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "family": "alias",
+          "target": 9,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0.2,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "family": "alias",
+          "target": 12,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 15,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.25,
+          "top": [
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "family": "ambiguous",
+          "target": null,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.25,
+          "top": [
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 23,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 24,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 25,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 28,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 29,
+          "family": "mixed",
+          "target": 8,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "family": "mixed",
+          "target": 10,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "family": "mixed",
+          "target": 11,
+          "selected": null,
+          "reason": "INSUFFICIENT_MARGIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 11,
+              "supported": 2,
+              "coverage": 0.666666666667,
+              "score": 0.4
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "family": "mixed",
+          "target": 2,
+          "selected": 2,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 2,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "family": "mixed",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "family": "mixed",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "family": "mixed",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 9,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        }
+      ]
+    },
+    "guarded_relational": {
+      "metrics": {
+        "queries": 36,
+        "answerable": 20,
+        "unanswerable": 16,
+        "correct": 20,
+        "wrong": 0,
+        "false_accept": 2,
+        "abstain_positive": 0,
+        "abstain_negative": 14,
+        "by_family": {
+          "literal": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "alias": {
+            "count": 6,
+            "correct": 6,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          },
+          "ambiguous": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "negative": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "misleading": {
+            "count": 4,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 2,
+            "abstain": 2
+          },
+          "mixed": {
+            "count": 8,
+            "correct": 8,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 0
+          }
+        },
+        "admitted": 22,
+        "coverage": 0.611111111111,
+        "selective_error": 0.090909090909
+      },
+      "cost": {
+        "candidate_comparisons": 432,
+        "support_probes": 1224,
+        "relation_lookups": 80
+      },
+      "rows": [
+        {
+          "id": 1,
+          "family": "literal",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "family": "literal",
+          "target": 4,
+          "selected": 4,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 4,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "family": "literal",
+          "target": 6,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "family": "literal",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 7,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "family": "literal",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "family": "literal",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "family": "alias",
+          "target": 1,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "family": "alias",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "family": "alias",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "family": "alias",
+          "target": 7,
+          "selected": 7,
+          "reason": null,
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 7,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "family": "alias",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 9,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "family": "alias",
+          "target": 12,
+          "selected": 12,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "AMBIGUOUS_RELATION",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "AMBIGUOUS_RELATION",
+          "margin": 0,
+          "top": [
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "AMBIGUOUS_RELATION",
+          "margin": 0,
+          "top": [
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 23,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 24,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "NO_MATCH",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 25,
+          "family": "misleading",
+          "target": null,
+          "selected": 1,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "family": "misleading",
+          "target": null,
+          "selected": 6,
+          "reason": null,
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "INSUFFICIENT_SUPPORT",
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "family": "mixed",
+          "target": 10,
+          "selected": 10,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "family": "mixed",
+          "target": 11,
+          "selected": 11,
+          "reason": null,
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 11,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "family": "mixed",
+          "target": 2,
+          "selected": 2,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 2,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "family": "mixed",
+          "target": 3,
+          "selected": 3,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "family": "mixed",
+          "target": 5,
+          "selected": 5,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "family": "mixed",
+          "target": 8,
+          "selected": 8,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "family": "mixed",
+          "target": 9,
+          "selected": 9,
+          "reason": null,
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 9,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        }
+      ]
+    },
+    "always_abstain": {
+      "metrics": {
+        "queries": 36,
+        "answerable": 20,
+        "unanswerable": 16,
+        "correct": 0,
+        "wrong": 0,
+        "false_accept": 0,
+        "abstain_positive": 20,
+        "abstain_negative": 16,
+        "by_family": {
+          "literal": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "alias": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "ambiguous": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "negative": {
+            "count": 6,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 6
+          },
+          "misleading": {
+            "count": 4,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 4
+          },
+          "mixed": {
+            "count": 8,
+            "correct": 0,
+            "wrong": 0,
+            "false_accept": 0,
+            "abstain": 8
+          }
+        },
+        "admitted": 0,
+        "coverage": 0,
+        "selective_error": null
+      },
+      "cost": {
+        "candidate_comparisons": 432,
+        "support_probes": 1224,
+        "relation_lookups": 80
+      },
+      "rows": [
+        {
+          "id": 1,
+          "family": "literal",
+          "target": 1,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "family": "literal",
+          "target": 4,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 4,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "family": "literal",
+          "target": 6,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "family": "literal",
+          "target": 7,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 7,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "family": "literal",
+          "target": 10,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "family": "literal",
+          "target": 12,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "family": "alias",
+          "target": 1,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "family": "alias",
+          "target": 3,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "family": "alias",
+          "target": 5,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.333333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.333333333333
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "family": "alias",
+          "target": 7,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 7,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "family": "alias",
+          "target": 9,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.4,
+          "top": [
+            {
+              "id": 9,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "family": "alias",
+          "target": 12,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 12,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 8,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "family": "ambiguous",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 1,
+              "score": 0.25
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": [
+            {
+              "id": 11,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.2
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 23,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 24,
+          "family": "negative",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0,
+          "top": []
+        },
+        {
+          "id": 25,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 1,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 2,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.233333333333,
+          "top": [
+            {
+              "id": 6,
+              "supported": 2,
+              "coverage": 1,
+              "score": 0.4
+            },
+            {
+              "id": 5,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "family": "misleading",
+          "target": null,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.166666666667,
+          "top": [
+            {
+              "id": 3,
+              "supported": 1,
+              "coverage": 0.5,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "family": "mixed",
+          "target": 8,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "family": "mixed",
+          "target": 10,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 10,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 9,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "family": "mixed",
+          "target": 11,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.457142857143,
+          "top": [
+            {
+              "id": 11,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.6
+            },
+            {
+              "id": 12,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.142857142857
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "family": "mixed",
+          "target": 2,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 2,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 1,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "family": "mixed",
+          "target": 3,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 3,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 4,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "family": "mixed",
+          "target": 5,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 5,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 6,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "family": "mixed",
+          "target": 8,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 8,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 7,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "family": "mixed",
+          "target": 9,
+          "selected": null,
+          "reason": "ALWAYS_ABSTAIN",
+          "margin": 0.583333333333,
+          "top": [
+            {
+              "id": 9,
+              "supported": 3,
+              "coverage": 1,
+              "score": 0.75
+            },
+            {
+              "id": 10,
+              "supported": 1,
+              "coverage": 0.333333333333,
+              "score": 0.166666666667
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,775 @@
+{
+  "schema": "memoria-relation-provenance/v1",
+  "synthetic": true,
+  "scenarios": [
+    {
+      "id": "two_distinct_records",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": "router",
+      "truth": "router"
+    },
+    {
+      "id": "same_root",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "same_source",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "pending_review",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "pending",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "rejected_review",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "rejected",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "retired",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "retired",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "expired",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 15
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "not_yet_issued",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 16,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "wrong_app",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:beta",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "wrong_context",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "audio",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "conflict_even_with_majority",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "c",
+          "alias": "gateway",
+          "target": "mixer",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:c",
+          "root": "root:c",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "withdraw_record",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [
+        "b"
+      ],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "withdraw_root",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [
+        "root:b"
+      ],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "withdraw_source",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [
+        "source:b"
+      ],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": "router"
+    },
+    {
+      "id": "withdraw_conflict",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "c",
+          "alias": "gateway",
+          "target": "mixer",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:c",
+          "root": "root:c",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [
+        "c"
+      ],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": "router",
+      "truth": "router"
+    },
+    {
+      "id": "unknown_alias",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "unknown",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": null,
+      "truth": null
+    },
+    {
+      "id": "forged_consistent_evidence",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "mixer",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "mixer",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": "mixer",
+      "truth": "router"
+    },
+    {
+      "id": "three_sources_one_withdrawn",
+      "records": [
+        {
+          "id": "a",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:a",
+          "root": "root:a",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "b",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:b",
+          "root": "root:b",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        },
+        {
+          "id": "c",
+          "alias": "gateway",
+          "target": "router",
+          "app": "fixture:alpha",
+          "context": "network",
+          "source": "source:c",
+          "root": "root:c",
+          "review": "approved",
+          "state": "active",
+          "issued": 10,
+          "expires": 20
+        }
+      ],
+      "withdrawn": [
+        "root:b"
+      ],
+      "request": {
+        "alias": "gateway",
+        "app": "fixture:alpha",
+        "context": "network",
+        "now": 15
+      },
+      "expected": "router",
+      "truth": "router"
+    }
+  ]
+}
