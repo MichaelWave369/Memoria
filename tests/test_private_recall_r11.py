@@ -141,8 +141,12 @@ class PrivateRecallTests(unittest.TestCase):
     def test_query_and_result_bounds(self):
         for text in ("", "!!!", "x"*513, " ".join("t"+str(i) for i in range(65))):
             self.assertEqual(self.search(text).status_code,422)
-        for limit in (0,21):
+        for limit in (0,21,True,"5"):
             self.assertEqual(self.search("test",limit).status_code,422)
+
+        response = self.client.post("/memoria/recall",headers={"Authorization":"Bearer "+TOKEN},
+                                    json={"text":"test","app_name":"beta"})
+        self.assertEqual(response.status_code,422)
 
     def test_read_only_and_deleted_row_disappears_without_index(self):
         mid = self.add("match")
