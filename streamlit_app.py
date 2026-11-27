@@ -1,4 +1,5 @@
 import json
+from contextlib import closing
 import os
 import socket
 import threading
@@ -163,15 +164,26 @@ def privacy_page(cn, memories):
         if c3.button("Save", key=f"s_{app}"):
             set_permission(cn, app, can_read, can_write)
 
+    receipt = st.session_state.pop("forget_receipt", None)
+    if receipt is not None:
+        if receipt["status"] == "LOGICALLY_DELETED":
+            st.warning("Logical SQL deletion recorded. Vector cleanup is pending; external copies are unverified.")
+        else:
+            st.info("No memory or existing deletion intent found for that ID.")
+
     st.markdown("### Export")
     export_data = json.dumps(memories, indent=2)
     st.download_button("Export vault (.memoria)", data=export_data, file_name="vault.memoria", mime="application/json")
 
     st.markdown("### Forget Memory")
     mem_id = st.number_input("Memory ID to forget", min_value=1, step=1)
-    if st.button("Forget permanently"):
-        delete_memory(cn, int(mem_id))
-        st.warning("Memory deleted.")
+    st.caption("Logical SQL deletion only. Historical vectors, exports and backups remain unverified.")
+    confirmed = st.checkbox("Confirm logical deletion of this memory ID", key="forget_confirm")
+    if st.button("Delete from SQL and record cleanup obligation", disabled=not confirmed):
+        with closing(get_connection()) as deletion_conn:
+            receipt = delete_memory(deletion_conn, int(mem_id))
+        st.session_state["forget_receipt"] = receipt
+        st.rerun()
 
 
 def recall_page():
