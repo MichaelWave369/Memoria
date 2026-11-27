@@ -1,0 +1,456 @@
+{
+  "schema": "memoria-abstention/v1",
+  "synthetic": true,
+  "calibration": {
+    "documents": [
+      {
+        "id": 1,
+        "text": "router packet loss uplink"
+      },
+      {
+        "id": 2,
+        "text": "router firmware upgrade"
+      },
+      {
+        "id": 3,
+        "text": "battery charge voltage"
+      },
+      {
+        "id": 4,
+        "text": "battery temperature storage"
+      },
+      {
+        "id": 5,
+        "text": "garden soil irrigation"
+      },
+      {
+        "id": 6,
+        "text": "garden compost fertilizer"
+      }
+    ],
+    "relations": {
+      "gateway": [
+        "router"
+      ],
+      "dropout": [
+        "loss"
+      ],
+      "accumulator": [
+        "battery"
+      ],
+      "potential": [
+        "voltage"
+      ],
+      "bed": [
+        "garden",
+        "storage"
+      ],
+      "watering": [
+        "irrigation"
+      ],
+      "stale": [
+        "upgrade"
+      ]
+    },
+    "queries": [
+      {
+        "id": 1,
+        "family": "literal",
+        "text": "router packet loss",
+        "target": 1
+      },
+      {
+        "id": 2,
+        "family": "literal",
+        "text": "battery temperature",
+        "target": 4
+      },
+      {
+        "id": 3,
+        "family": "alias",
+        "text": "gateway dropout",
+        "target": 1
+      },
+      {
+        "id": 4,
+        "family": "alias",
+        "text": "accumulator potential",
+        "target": 3
+      },
+      {
+        "id": 5,
+        "family": "mixed",
+        "text": "watering soil",
+        "target": 5
+      },
+      {
+        "id": 6,
+        "family": "mixed",
+        "text": "router firmware",
+        "target": 2
+      },
+      {
+        "id": 7,
+        "family": "ambiguous",
+        "text": "router",
+        "target": null
+      },
+      {
+        "id": 8,
+        "family": "ambiguous",
+        "text": "bed",
+        "target": null
+      },
+      {
+        "id": 9,
+        "family": "negative",
+        "text": "battery warranty",
+        "target": null
+      },
+      {
+        "id": 10,
+        "family": "negative",
+        "text": "garden invoice",
+        "target": null
+      },
+      {
+        "id": 11,
+        "family": "negative",
+        "text": "galaxy telescope",
+        "target": null
+      },
+      {
+        "id": 12,
+        "family": "misleading",
+        "text": "stale router",
+        "target": null
+      }
+    ]
+  },
+  "evaluation": {
+    "documents": [
+      {
+        "id": 1,
+        "text": "database restore snapshot integrity"
+      },
+      {
+        "id": 2,
+        "text": "database migration schema index"
+      },
+      {
+        "id": 3,
+        "text": "audio mixer recording bass"
+      },
+      {
+        "id": 4,
+        "text": "audio amplifier speaker impedance"
+      },
+      {
+        "id": 5,
+        "text": "memory consent withdrawal retention"
+      },
+      {
+        "id": 6,
+        "text": "memory encryption key rotation"
+      },
+      {
+        "id": 7,
+        "text": "network switch port vlan"
+      },
+      {
+        "id": 8,
+        "text": "network access firewall policy"
+      },
+      {
+        "id": 9,
+        "text": "solar panel charge controller"
+      },
+      {
+        "id": 10,
+        "text": "solar inverter output frequency"
+      },
+      {
+        "id": 11,
+        "text": "engine coolant thermostat temperature"
+      },
+      {
+        "id": 12,
+        "text": "engine oil filter pressure"
+      }
+    ],
+    "relations": {
+      "archive": [
+        "snapshot"
+      ],
+      "recovery": [
+        "restore"
+      ],
+      "console": [
+        "mixer"
+      ],
+      "lowend": [
+        "bass"
+      ],
+      "permission": [
+        "consent"
+      ],
+      "revocation": [
+        "withdrawal"
+      ],
+      "segment": [
+        "vlan"
+      ],
+      "barrier": [
+        "firewall"
+      ],
+      "regulator": [
+        "controller"
+      ],
+      "converter": [
+        "inverter"
+      ],
+      "lubricant": [
+        "oil"
+      ],
+      "heat": [
+        "temperature"
+      ],
+      "bank": [
+        "memory",
+        "database"
+      ],
+      "filter": [
+        "filter",
+        "firewall"
+      ],
+      "broken": [
+        "restore"
+      ],
+      "obsolete": [
+        "rotation"
+      ],
+      "output": [
+        "output",
+        "pressure"
+      ]
+    },
+    "queries": [
+      {
+        "id": 1,
+        "family": "literal",
+        "text": "database restore snapshot",
+        "target": 1
+      },
+      {
+        "id": 2,
+        "family": "literal",
+        "text": "audio amplifier speaker",
+        "target": 4
+      },
+      {
+        "id": 3,
+        "family": "literal",
+        "text": "memory encryption key",
+        "target": 6
+      },
+      {
+        "id": 4,
+        "family": "literal",
+        "text": "network switch port",
+        "target": 7
+      },
+      {
+        "id": 5,
+        "family": "literal",
+        "text": "solar inverter frequency",
+        "target": 10
+      },
+      {
+        "id": 6,
+        "family": "literal",
+        "text": "engine oil pressure",
+        "target": 12
+      },
+      {
+        "id": 7,
+        "family": "alias",
+        "text": "archive recovery",
+        "target": 1
+      },
+      {
+        "id": 8,
+        "family": "alias",
+        "text": "console lowend",
+        "target": 3
+      },
+      {
+        "id": 9,
+        "family": "alias",
+        "text": "permission revocation",
+        "target": 5
+      },
+      {
+        "id": 10,
+        "family": "alias",
+        "text": "segment switch",
+        "target": 7
+      },
+      {
+        "id": 11,
+        "family": "alias",
+        "text": "regulator panel",
+        "target": 9
+      },
+      {
+        "id": 12,
+        "family": "alias",
+        "text": "lubricant engine",
+        "target": 12
+      },
+      {
+        "id": 13,
+        "family": "ambiguous",
+        "text": "database",
+        "target": null
+      },
+      {
+        "id": 14,
+        "family": "ambiguous",
+        "text": "bank",
+        "target": null
+      },
+      {
+        "id": 15,
+        "family": "ambiguous",
+        "text": "filter",
+        "target": null
+      },
+      {
+        "id": 16,
+        "family": "ambiguous",
+        "text": "solar",
+        "target": null
+      },
+      {
+        "id": 17,
+        "family": "ambiguous",
+        "text": "output",
+        "target": null
+      },
+      {
+        "id": 18,
+        "family": "ambiguous",
+        "text": "memory",
+        "target": null
+      },
+      {
+        "id": 19,
+        "family": "negative",
+        "text": "database refund",
+        "target": null
+      },
+      {
+        "id": 20,
+        "family": "negative",
+        "text": "audio warranty",
+        "target": null
+      },
+      {
+        "id": 21,
+        "family": "negative",
+        "text": "engine invoice",
+        "target": null
+      },
+      {
+        "id": 22,
+        "family": "negative",
+        "text": "moon telescope",
+        "target": null
+      },
+      {
+        "id": 23,
+        "family": "negative",
+        "text": "painting canvas",
+        "target": null
+      },
+      {
+        "id": 24,
+        "family": "negative",
+        "text": "recipe pasta",
+        "target": null
+      },
+      {
+        "id": 25,
+        "family": "misleading",
+        "text": "broken database",
+        "target": null
+      },
+      {
+        "id": 26,
+        "family": "misleading",
+        "text": "obsolete memory",
+        "target": null
+      },
+      {
+        "id": 27,
+        "family": "misleading",
+        "text": "archive invoice",
+        "target": null
+      },
+      {
+        "id": 28,
+        "family": "misleading",
+        "text": "console refund",
+        "target": null
+      },
+      {
+        "id": 29,
+        "family": "mixed",
+        "text": "barrier network access",
+        "target": 8
+      },
+      {
+        "id": 30,
+        "family": "mixed",
+        "text": "converter solar frequency",
+        "target": 10
+      },
+      {
+        "id": 31,
+        "family": "mixed",
+        "text": "heat engine thermostat",
+        "target": 11
+      },
+      {
+        "id": 32,
+        "family": "mixed",
+        "text": "database migration index",
+        "target": 2
+      },
+      {
+        "id": 33,
+        "family": "mixed",
+        "text": "audio recording bass",
+        "target": 3
+      },
+      {
+        "id": 34,
+        "family": "mixed",
+        "text": "memory consent retention",
+        "target": 5
+      },
+      {
+        "id": 35,
+        "family": "mixed",
+        "text": "network firewall policy",
+        "target": 8
+      },
+      {
+        "id": 36,
+        "family": "mixed",
+        "text": "solar panel controller",
+        "target": 9
+      }
+    ]
+  }
+}
