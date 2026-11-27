@@ -17,3 +17,5 @@ jobs:
         run: node research/recall/check.mjs
       - name: Recompute frozen abstention experiment
         run: node research/recall/check-abstention.mjs
+      - name: Recompute frozen relation provenance experiment
+        run: node research/recall/check-provenance.mjs
