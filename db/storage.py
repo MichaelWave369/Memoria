@@ -198,12 +198,14 @@ def delete_memory(conn: sqlite3.Connection, memory_id: int) -> Dict[str, Any]:
         raise ValueError("delete requires an independent transaction")
     with conn:
         conn.execute("BEGIN IMMEDIATE")
-        conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,))
+        deleted = conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,)).rowcount
         row = conn.execute(
             "SELECT vector_state,external_state FROM memory_forget_intents WHERE memory_id=?",
             (memory_id,)
         ).fetchone()
         if row is None:
+            if deleted:
+                raise RuntimeError("logical deletion intent missing; refusing commit")
             return {"memory_id": memory_id, "status": "NOT_FOUND",
                     "authority": "NONE"}
         return {"memory_id": memory_id, "status": "LOGICALLY_DELETED",
