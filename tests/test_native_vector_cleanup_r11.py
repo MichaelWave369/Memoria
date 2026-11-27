@@ -1,4 +1,5 @@
 """Opt-in native Chroma integration tests. All paths and payloads disposable."""
+from contextlib import closing
 from pathlib import Path
 import os
 import sqlite3
@@ -150,7 +151,7 @@ class NativeVectorCleanupTests(unittest.TestCase):
     def test_observation_persists_in_reopened_sqlite(self):
         delete_memory(self.db,self.target)
         receipt = self.clean()
-        with sqlite3.connect(self.root/"source.db") as reopened:
+        with closing(sqlite3.connect(self.root/"source.db")) as reopened:
             row = reopened.execute("SELECT collection_id,state FROM fixture_vector_observations "
                                    "WHERE memory_id=?",(self.target,)).fetchone()
             self.assertEqual(row,(receipt["collection_id"],ABSENT))
