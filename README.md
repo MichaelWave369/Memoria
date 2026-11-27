@@ -14,7 +14,7 @@ Memoria gives Agentora, Growora, Mindora, Reconnect, CoEvo, and future Triad app
 - Chroma/Ollama legacy paths held pending private indexing review
 - Permission controls per app (read/write)
 - Export as `.memoria` vault file
-- Local SQL deletion only; coordinated forgetting remains unqualified
+- Local SQL deletion with durable cleanup intent; historical vectors and external copies remain unverified
 - Launchpad-ready snippet included
 
 ## One-command install
