@@ -33,3 +33,23 @@ jobs:
       - run: python -c "import chromadb; print('Native Chroma version:', chromadb.__version__)"
       - run: python -m unittest discover -s tests -p 'test_native_vector_cleanup_r11.py' -v
       - run: python -m unittest discover -s tests -p 'test_native_vector_recovery_r11.py' -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/checkout@v4
+        with:
+          repository: MichaelWave369/PhiMemory9
+          ref: d897308cb0af166bda9c897eac6ed03d8958577d
+          path: native/PhiMemory9
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: MichaelWave369/NBGPocketMesh
+          ref: 0687f10970989194d4af554d9b189c7ce8a1ad15
+          path: native/NBGPocketMesh
+          persist-credentials: false
+      - name: Cold restore and native continuity witness
+        env:
+          MEMORIA_NATIVE_PHI_MEMORY: ${{ github.workspace }}/native/PhiMemory9
+          MEMORIA_NATIVE_POCKETMESH: ${{ github.workspace }}/native/NBGPocketMesh
+        run: python -m unittest discover -s tests -p 'test_native_retention_continuity_r11.py' -v
