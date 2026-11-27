@@ -63,17 +63,23 @@ client.store(
 )
 
 memories = client.query(app_name="Agentora", agent_id="coach-01", limit=10)
-# Semantic recall is held pending scoped vector privacy review.
+matches = client.recall("coaching prompts", limit=5)
+# Lexical baseline; semantic recall remains held.
 ```
 
 ## API Endpoints
 
 - `POST /memoria/store`
 - `GET /memoria/query`
-- `POST /memoria/semantic`
+- `POST /memoria/recall` — bounded scoped lexical retrieval (IDs and rational scores)
+- `POST /memoria/semantic` — held
 - `GET /memoria/synthesis?window=daily|weekly`
 - `POST /permissions/{app_name}?can_read=true&can_write=false`
 - `GET /health`
+
+## Private recall research baseline
+
+The new lexical route scans only authorized application records within explicit research budgets, without a persistent vector index or model call. See [R11.3a protocol](docs/LIVING_MEMORY_R11_PRIVATE_RECALL.md). Production remains HELD.
 
 ## Data-at-rest encryption option
 
