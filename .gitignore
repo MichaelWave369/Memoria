@@ -6,3 +6,14 @@ memoria.db
 chroma_data/
 exports/
 .streamlit/secrets.toml
+# Local memory databases, sidecars, snapshots and test outputs
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.memoria
+.pytest_cache/
+.coverage
+native/
