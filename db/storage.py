@@ -42,6 +42,47 @@ def init_db(conn: sqlite3.Connection) -> None:
         )
         """
     )
+    # Durable logical deletion intent. No content, app name or key material.
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS memory_forget_intents (
+            memory_id INTEGER PRIMARY KEY CHECK(memory_id > 0),
+            vector_state TEXT NOT NULL DEFAULT 'PENDING_UNVERIFIED'
+                CHECK(vector_state = 'PENDING_UNVERIFIED'),
+            external_state TEXT NOT NULL DEFAULT 'UNKNOWN'
+                CHECK(external_state = 'UNKNOWN')
+        )
+        """
+    )
+    conn.execute(
+        """
+        CREATE TRIGGER IF NOT EXISTS memoria_record_forget
+        AFTER DELETE ON memories
+        BEGIN
+            INSERT INTO memory_forget_intents(memory_id) VALUES (OLD.id);
+        END
+        """
+    )
+    conn.execute(
+        """
+        CREATE TRIGGER IF NOT EXISTS memoria_no_forgotten_insert
+        AFTER INSERT ON memories
+        WHEN EXISTS (SELECT 1 FROM memory_forget_intents WHERE memory_id=NEW.id)
+        BEGIN
+            SELECT RAISE(ABORT, 'forgotten memory ID');
+        END
+        """
+    )
+    conn.execute(
+        """
+        CREATE TRIGGER IF NOT EXISTS memoria_no_forgotten_id_update
+        BEFORE UPDATE OF id ON memories
+        WHEN EXISTS (SELECT 1 FROM memory_forget_intents WHERE memory_id=NEW.id)
+        BEGIN
+            SELECT RAISE(ABORT, 'forgotten memory ID');
+        END
+        """
+    )
     conn.commit()
 
 
@@ -144,9 +185,32 @@ def query_memories(
     return out
 
 
-def delete_memory(conn: sqlite3.Connection, memory_id: int) -> None:
-    conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,))
-    conn.commit()
+def delete_memory(conn: sqlite3.Connection, memory_id: int) -> Dict[str, Any]:
+    """Trusted local operator deletion; vector and external copies unverified.
+
+    An ordinary SQL DELETE creates its intent in the same transaction.
+    A repeated request returns the existing intent without creating a new one.
+    This function owns the transaction, never commits caller-owned work.
+    """
+    if type(memory_id) is not int or not 1 <= memory_id <= 2**63 - 1:
+        raise ValueError("invalid memory ID")
+    if conn.in_transaction:
+        raise ValueError("delete requires an independent transaction")
+    with conn:
+        conn.execute("BEGIN IMMEDIATE")
+        deleted = conn.execute("DELETE FROM memories WHERE id = ?", (memory_id,)).rowcount
+        row = conn.execute(
+            "SELECT vector_state,external_state FROM memory_forget_intents WHERE memory_id=?",
+            (memory_id,)
+        ).fetchone()
+        if row is None:
+            if deleted:
+                raise RuntimeError("logical deletion intent missing; refusing commit")
+            return {"memory_id": memory_id, "status": "NOT_FOUND",
+                    "authority": "NONE"}
+        return {"memory_id": memory_id, "status": "LOGICALLY_DELETED",
+                "vector_state": row[0], "external_state": row[1],
+                "authority": "NONE"}
 
 
 def set_permission(conn: sqlite3.Connection, app_name: str, can_read: bool, can_write: bool) -> None:
