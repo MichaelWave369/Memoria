@@ -1,9 +1,7 @@
 import json
 from contextlib import closing
-import socket
 import threading
 from datetime import datetime
-from typing import List
 
 import pandas as pd
 import plotly.express as px
@@ -38,26 +36,11 @@ def start_api():
     return True
 
 
-def detect_triad_apps() -> List[str]:
-    ports = {"Agentora": 8501, "Growora": 8502, "Mindora": 8503, "Reconnect": 8504, "CoEvo": 8505}
-    running = []
-    for app_name, port in ports.items():
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.settimeout(0.15)
-            if sock.connect_ex(("127.0.0.1", port)) == 0:
-                running.append(app_name)
-    return running
-
-
 def sidebar():
-    st.sidebar.title("Triad369 Link")
-    running = detect_triad_apps()
-    if running:
-        st.sidebar.info(f"Open local ports (app identity unverified): {', '.join(running)}")
-    else:
-        st.sidebar.info("No configured Triad ports responded on localhost.")
+    st.sidebar.title("PHI369 Memory")
+    st.sidebar.caption("Trusted local operator interface")
     st.sidebar.code("/memoria/store\n/memoria/query\n/memoria/recall")
-    st.sidebar.caption("Authenticated API only. Semantic recall is held.")
+    st.sidebar.info("Application routes require credentials and explicit permissions. Semantic recall is held.")
 
 
 def dashboard_page(memories):
@@ -115,6 +98,9 @@ def explorer_page(memories):
 
 def write_page(cn):
     st.subheader("Write & Ingest")
+    captured = st.session_state.pop("capture_receipt", None)
+    if captured is not None:
+        st.success(f"Stored memory #{captured}. Vector indexing is held.")
     with st.form("quick_capture"):
         content = st.text_area("Memory")
         app_name = st.text_input("App name", value="Memoria")
@@ -138,7 +124,8 @@ def write_page(cn):
             st.error("Encryption configuration unavailable. No memory stored.")
             return
         mid = store_memory(cn, payload, cipher)
-        st.success(f"Stored memory #{mid}. Vector indexing is held.")
+        st.session_state["capture_receipt"] = mid
+        st.rerun()
 
     st.info("Application writes require a provisioned bearer credential and native write permission. See the README for the local client.")
 
@@ -170,7 +157,7 @@ def privacy_page(cn, memories):
     st.markdown("### Forget Memory")
     mem_id = st.number_input("Memory ID to forget", min_value=1, step=1)
     st.caption("Logical SQL deletion only. Historical vectors, exports and backups remain unverified.")
-    confirmed = st.checkbox("Confirm logical deletion of this memory ID", key="forget_confirm")
+    confirmed = st.checkbox("Confirm logical deletion of this memory ID", key=f"forget_confirm_{int(mem_id)}")
     if st.button("Delete from SQL and record cleanup obligation", disabled=not confirmed):
         with closing(get_connection()) as deletion_conn:
             receipt = delete_memory(deletion_conn, int(mem_id))
